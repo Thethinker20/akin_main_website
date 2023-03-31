@@ -1,8 +1,4 @@
 $(document).ready(function(){
-    $('ul li a').click(function(){
-      $('li a').removeClass("active-n");
-      $(this).addClass("active-n");
-  });
   });
 
   const loader = document.querySelector('#particles-js');
@@ -18,6 +14,29 @@ $(document).ready(function(){
     }, 6000);
   }
 // init();
+
+const activePage = window.location.pathname;
+const navLinks = document.querySelectorAll('.nav-horizontal a').
+forEach(link => {
+  if(link.href.includes(`${activePage}`)){
+    link.classList.add('active-n');
+    console.log(link);
+  }
+})
+
+
+
+$(window).on('scroll', function () {
+  var scrolled = $(window).scrollTop();
+  if (scrolled > 300) $('.go-top').addClass('active');
+  if (scrolled < 300) $('.go-top').removeClass('active');
+});
+
+$('.go-top').on('click', function () {
+  $("html, body").animate({
+      scrollTop: "0"
+  }, 1200);
+});
 
 particlesJS("particles-js", {
   "particles": {

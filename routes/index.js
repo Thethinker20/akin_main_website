@@ -7,6 +7,15 @@ router.get("/home", (req, res) => {
 router.get("/contactus", (req, res) => {
   res.render("pages/contactus");
 });
+router.get("/email_temp", (req, res) => {
+  res.render("pages/email_template", { layout: false });
+});
 
+router.get("/bemail_temp", (req, res) => {
+  res.render("pages/business_temp_email", { layout: false });
+});
+router.get("/modal", (req, res) => {
+  res.render("pages/modal_tst", { layout: false });
+});
 
 module.exports = router;

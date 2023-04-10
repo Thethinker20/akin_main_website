@@ -15,8 +15,8 @@ body {
 }
 
 .main {
-    /* display: none;
-    opacity: 0; */
+    display: none;
+    opacity: 0;
     transition: opacity 1s ease-in;
 }
 
@@ -1587,6 +1587,60 @@ svg {
     font-size: 14px;
 }
 
+.modal_body {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fira sans';
+    font-weight: 300;
+    background: #0000006a;
+    display: none;
+    animation: fadeIn 1.5s ease-in-out;}
+
+.modalView {
+    width: 350px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    padding: 40px 20px;
+    font-size: 1.2rem;
+    -webkit-box-shadow: -1px 2px 30px -8px rgba(0, 0, 0, 0.62);
+    -moz-box-shadow: -1px 2px 30px -8px rgba(0, 0, 0, 0.62);
+    box-shadow: -1px 2px 30px -8px rgba(0, 0, 0, 0.62);
+}
+
+.modalView>.modalView__content {
+    color: black;
+    font-weight: 600;
+}
+
+.modalView>.modalView__content.centered {
+    text-align: center;
+}
+
+.modalView__content h2 {
+    font-size: 1.8rem;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    font-weight: 400;
+    line-height: 38px;
+}
+
+.modalView__content h6 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding-top: 25px;
+}
+
 @keyframes ripple {
 
     0%,
@@ -1707,5 +1761,13 @@ svg {
     100% {
         -webkit-transform: translateX(0);
         transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
     }
 }

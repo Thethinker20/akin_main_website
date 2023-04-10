@@ -21,24 +21,24 @@
             <div class="col-lg-6" style="padding-right: 0px;">
                 <div class="cont_form_box">
                     <h2>Contact Us</h2>
-                    <form class="cont_form" action="post">
+                    <form class="cont_form" id="cont_form" action="POST">
                         <div class="row">
                             <div class="col-lg-6">
-                                <input type="text" class="input_form" id="name" placeholder="Name" required>
+                                <input type="text" class="input_form" id="name" placeholder="Name" name="name" required>
                             </div>
                             <div class="col-lg-6">
-                                <input type="text" class="input_form" id="email" placeholder="Email" required>
+                                <input type="text" class="input_form" id="email" placeholder="Email" name="email" required>
                             </div>
                         </div>
                         <div class="row" style="padding-top: 50px;">
                             <div class="col-lg-6">
-                                <input type="text" class="input_form" id="name" placeholder="Company Name" required>
+                                <input type="text" class="input_form" id="comp_name" placeholder="Company Name" name="comp_name" required>
                             </div>
                             <div class="col-lg-6">
                                 <select class="input_form" name="services" id="services"
                                     style="padding: 11px 21px; color:rgb(106, 106, 106);">
                                     <option value="" disabled selected>Select a services</option>
-                                    <option value="1">Rpa_consultant</option>
+                                    <option value="1">Rpa consultant</option>
                                     <option value="2">Project Management</option>
                                     <option value="3">Software Develop</option>
                                 </select>
@@ -46,12 +46,12 @@
                         </div>
                         <div class="row" style="padding-top: 50px;">
                             <div class="col-lg-6">
-                            <input type="text" class="input_form" id="tnumber" placeholder="Phone Number" required>
+                            <input type="text" class="input_form" id="tnumber" placeholder="Phone Number" name="tnumber" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-12">
-                            <button class="submit_cont" type="submit"><i class="fa-solid fa-paper-plane"></i>Start Your Future</button>
+                            <button class="submit_cont" type="submit" value="cont_form"><i class="fa-solid fa-paper-plane"></i>Start Your Future</button>
                             </div>
                         </div>
                     </form>
@@ -96,3 +96,50 @@
 <section class="maps">
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1950.4054861503166!2d-68.8836987419567!3d12.125082420228068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e837d407e17580b%3A0xf95a4fb2faddff57!2s146-152%20Santa%20Rosaweg%2C%20Willemstad%2C%20Cura%C3%A7ao!5e0!3m2!1sen!2snl!4v1680232286554!5m2!1sen!2snl" style="height:500px; width:100%;border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
+    <div class="modal_body" id="modal_body">
+        <div class="modalView" id="modalView">
+            <div class="modalView__content centered">
+                <!--     <h1>THIS IS A TITLE</h1> -->
+                <h2>Request send Successful!</h2>
+                <h6>Please check your email box</h6>
+            </div>
+        </div>
+    </div>
+{{!-- <script>
+    const form = document.getElementById("cont_form");
+form.addEventListener("submit", send_mail);
+
+async function send_mail(event) {
+  event.preventDefault();
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const comp_name = document.getElementById("comp_name").value;
+  const services = document.getElementById("services").value;
+  const tnumber = document.getElementById("tnumber").value;
+
+
+const result = await fetch("/send_cont_mail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        comp_name,
+        services,
+        tnumber
+      }),
+    }).then((res) => res.json());
+    if (result.status === "202") {
+      console.log("Done")
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: result.error,
+      });
+    }
+
+ 
+}
+</script> --}}

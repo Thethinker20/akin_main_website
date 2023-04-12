@@ -166,7 +166,7 @@ body {
     width: 35px;
     top: 0;
     left: 0px;
-    background-color: #FF3B00;
+    background-color: #F06E30;
     -webkit-animation: moveLeftBounces-two 35s linear infinite;
     animation: moveLeftBounces-two 32s linear infinite;
     overflow: hidden;
@@ -195,7 +195,7 @@ body {
     width: 35px;
     top: 0;
     left: 0px;
-    background-color: #FF3B00;
+    background-color: #F06E30;
     -webkit-animation: moveLeftBounces-two 35s linear infinite;
     animation: moveLeftBounces-two 35s linear infinite;
     overflow: hidden;
@@ -891,7 +891,7 @@ svg {
 
 .process-title h3 {
     font-size: 22px;
-    color: #f83d04;
+    color: #e65a19;
     font-weight: 600;
     font-family: "Fira Sans";
     padding: 28px 0 8px;
@@ -923,7 +923,7 @@ svg {
 }
 
 .dreamit-smart-title span {
-    color: #FF3C00;
+    color: #F06E30;
 }
 
 .process-area .about-button a {
@@ -976,7 +976,7 @@ svg {
 }
 
 .itsoft-section-title span {
-    color: #FF3C00;
+    color: #F06E30;
 }
 
 .itsoft-section-title p {
@@ -989,7 +989,7 @@ svg {
     font-size: 18px;
     text-transform: capitalize;
     font-weight: 500;
-    color: #ff3c00;
+    color: #F06E30;
     margin: 0 0 16px;
     position: relative;
     left: 53px;
@@ -1002,7 +1002,7 @@ svg {
     left: -53px;
     height: 2px;
     width: 41px;
-    background: #FF3C00;
+    background: #F06E30;
 }
 
 /*center before after*/
@@ -1019,7 +1019,7 @@ svg {
     margin: auto;
     height: 2px;
     width: 41px;
-    background: #FF3C00;
+    background: #F06E30;
 }
 
 .upper.itsoft-section-title h5:after {
@@ -1031,7 +1031,7 @@ svg {
     margin: auto;
     height: 2px;
     width: 41px;
-    background: #FF3C00;
+    background: #F06E30;
 }
 
 .dreamit-smart-title h4 {
@@ -1049,10 +1049,10 @@ svg {
     font-family: 'Fira Sans';
     font-weight: 500;
     color: #fff;
-    background: #FF3B00;
+    background: #F06E30;
     display: inline-block;
     border-radius: 30px;
-    border: 1px solid #FF3B00;
+    border: 1px solid #F06E30;
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -1080,7 +1080,7 @@ svg {
     border-radius: 25px;
     text-align: center;
     background: #fff;
-    color: #FF3B00;
+    color: #F06E30;
     display: inline-block;
     margin-left: 14px;
     position: relative;
@@ -1089,7 +1089,7 @@ svg {
 }
 
 .about-button a:hover {
-    color: #FF3B00;
+    color: #F06E30;
     text-decoration: none;
 }
 
@@ -1099,7 +1099,7 @@ svg {
 }
 
 .about-button a:hover i {
-    background: #FF3B00;
+    background: #F06E30;
     color: #fff;
 }
 
@@ -1267,7 +1267,7 @@ svg {
     color: #fff;
     top: 3px;
     z-index: 1;
-    background: #FF3C00;
+    background: #F06E30;
     justify-content: center;
     align-items: center;
 }

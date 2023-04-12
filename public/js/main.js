@@ -9,8 +9,15 @@ const navLinks = document.querySelectorAll('.nav-horizontal a').
   forEach(link => {
     if (link.href.includes(`${activePage}`)) {
       link.classList.add('active-n');
-      var title_l = activePage.replace('/','');
+      var title_l = activePage.replace('/', '');
       document.getElementById('title').innerHTML = title_l.charAt(0).toUpperCase() + title_l.slice(1);
+      // var path = "css";
+      // var style = document.createElement('link');
+      // style.rel = 'stylesheet';
+      // style.type = 'text/css';
+      // style.media = 'screen';
+      // style.href = path + '/pages/services.css';
+      // document.getElementsByTagName('head')[0].appendChild(style);
     }
   })
 
@@ -26,7 +33,61 @@ if (activePage == "/home") {
     }, 2000);
   }
   init();
-} else {
+} else if (activePage == "/contactus") {
+  loader.style.opacity = 0;
+  loader.style.display = 'none';
+  main.style.display = 'block';
+  main.style.opacity = 1;
+
+  //send form
+  const form = document.getElementById("cont_form");
+  form.addEventListener("submit", send_mail);
+
+  async function send_mail(event) {
+    event.preventDefault();
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const comp_name = document.getElementById("comp_name").value;
+    var services = document.getElementById("services").value;
+    const tnumber = document.getElementById("tnumber").value;
+
+    if (services == 1) {
+      services = "Rpa Consultant"
+    } else if (services == 2) {
+      services = "Project Management"
+    } else if (services == 3) {
+      services = "Software Develop"
+    }
+
+    const result = await fetch("/send_cont_mail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        comp_name,
+        services,
+        tnumber
+      }),
+    }).then((res) => res.json());
+    if (result.status === "202") {
+      modalView.style.display = "flex";
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: result.error,
+      });
+    }
+
+
+  }
+
+  closeBtn.addEventListener("click", () => {
+    modalView.style.display = "none";
+  });
+}else{
   loader.style.opacity = 0;
   loader.style.display = 'none';
   main.style.display = 'block';
@@ -146,51 +207,3 @@ particlesJS("particles-js", {
 
 
 
-//send form
-const form = document.getElementById("cont_form");
-form.addEventListener("submit", send_mail);
-
-async function send_mail(event) {
-  event.preventDefault();
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const comp_name = document.getElementById("comp_name").value;
-  var services = document.getElementById("services").value;
-  const tnumber = document.getElementById("tnumber").value;
-
-  if (services == 1) {
-    services = "Rpa Consultant"
-  } else if (services == 2) {
-    services = "Project Management"
-  } else if (services == 3) {
-    services = "Software Develop"
-  }
-
-  const result = await fetch("/send_cont_mail", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      name,
-      email,
-      comp_name,
-      services,
-      tnumber
-    }),
-  }).then((res) => res.json());
-  if (result.status === "202") {
-    modalView.style.display = "flex";
-  } else {
-    Swal.fire({
-      icon: "error",
-      title: result.error,
-    });
-  }
-
-
-}
-
-closeBtn.addEventListener("click", () => {
-  modalView.style.display = "none";
-});

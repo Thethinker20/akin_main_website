@@ -70,7 +70,7 @@ app.post("/send_cont_mail", async (req, res) => {
         from: "info.akin.co@gmail.com",
         auth: {
             user: "info.akin.co@gmail.com",
-            pass: process.env.appPassword,
+            pass: "qiytyydoixyxynrd",
         },
     });
 

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Contact Form</title>
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://user-images.githubusercontent.com/43387401/227792516-aeb634a9-2adb-41a5-9289-b932e47ffe52.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.9/sweetalert2.css">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <div class="formbold-main-wrapper" id="particles-js">
+        <div class="formbold-main-content">
+            <div class="formbold-img-wrapper"></div>
+            <div class="formbold-form-wrapper">
+                <form id="cont_form" action="/send_cont_mail" method="POST">
+                    <div class="formbold-steps">
+                        <ul>
+                            <li class="formbold-step-menu1 active">
+                                <span>1</span>
+                                Company Info
+                            </li>
+                            <li class="formbold-step-menu2">
+                                <span>2</span>
+                                Service Info
+                            </li>
+                            <li class="formbold-step-menu3">
+                                <span>3</span>
+                                Finish
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="formbold-form-step-1 active">
+                        <div class="formbold-input-flex" style="flex-direction: column;">
+                            <h2>Welcome to AKIN</h2>
+                            <p class="form-p">We're excited to have you here and appreciate you taking the time to
+                                fill
+                                out this form.
+                                Your information will help us better understand your needs and tailor our services
+                                to
+                                meet them.<br><br>Thank you for choosing us, and we look forward to
+                                working with you!</p>
+                        </div>
+                        <div class="formbold-input-flex">
+                            <div>
+                                <label for="firstname" class="formbold-form-label"> First name </label>
+                                <input type="text" name="firstname" placeholder="Andrio" id="firstname"
+                                    class="formbold-form-input" required />
+                            </div>
+                            <div>
+                                <label for="lastname" class="formbold-form-label"> Last name </label>
+                                <input type="text" name="lastname" placeholder="Dolee" id="lastname"
+                                    class="formbold-form-input" required />
+                            </div>
+                        </div>
+
+                        <div class="formbold-input-flex">
+                            <div>
+                                <label for="email" class="formbold-form-label"> Email Address </label>
+                                <input type="email" name="email" placeholder="example@mail.com" id="email"
+                                    class="formbold-form-input" required />
+                            </div>
+                            <div>
+                                <label class="formbold-form-label"> Phone Number </label>
+                                <input type="text" name="tnumber" placeholder="+599 9 511 5055" id="tnumber"
+                                    class="formbold-form-input" required />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="formbold-form-step-2 ">
+                        <div class="formbold-input-flex">
+                            <div>
+                                <label class="formbold-form-label"> Company Name </label>
+                                <input type="text" name="comp_name" placeholder="Example bv" id="comp_name"
+                                    class="formbold-form-input" required />
+                            </div>
+                            <div>
+                                <label for="email" class="formbold-form-label"> Service </label>
+                                <select class="formbold-form-input" name="services" id="services" required>
+                                    <option value="" disabled selected>Select a services</option>
+                                    <option value="Rpa consultant">Rpa consultant</option>
+                                    <option value="Project Management">Project Management</option>
+                                    <option value="Software Develop">Software Develop</option>
+                                    <option value="Courses">Courses</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="formbold-input-flex">
+                            <div>
+                                <label class="formbold-form-label"> Needs and goals for this service? </label>
+                                <select class="formbold-form-input" name="n_goals" id="n_goals" required>
+                                    <option value="" disabled selected>Select Needs and Goals</option>
+                                    <option value="Increase efficiency">Increase efficiency</option>
+                                    <option value="Reduce costs">Reduce costs</option>
+                                    <option value="Improve customer satisfaction">Improve customer satisfaction
+                                    </option>
+                                    <option value="Business improvement and update">Business improvement and update
+                                    </option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="formbold-form-label"> What level of expertise do you require? </label>
+                                <select class="formbold-form-input" name="l_expert" id="l_expert" required>
+                                    <option value="" disabled selected>Select level of expertise</option>
+                                    <option value="Entry-level">Entry-level</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Advanced">Advanced</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="formbold-input-flex">
+                            <div>
+                                <label class="formbold-form-label"> Preferred timeline for this service </label>
+                                <select class="formbold-form-input" name="timeline" id="timeline" required>
+                                    <option value="" disabled selected>Select level of expertise</option>
+                                    <option value="ASAP">ASAP</option>
+                                    <option value="Within the next month">Within the next month</option>
+                                    <option value="Within the next quarter">Within the next quarter</option>
+                                    <option value="Not defined">Not defined</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="formbold-form-label"> What is your budget for this service? </label>
+                                <select class="formbold-form-input" name="budget" id="budget" required>
+                                    <option value="" disabled selected>Select your budget</option>
+                                    <option value="Less than 1,000 Guilders">Less than 1,000 Guilders</option>
+                                    <option value="Between 1,000-5,000 Guilders">Between 1,000-5,000 Guilders</option>
+                                    <option value="More than 5,000 Guilders">More than 5,000 Guilders</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="formbold-form-step-3">
+                        <div class="formbold-input-flex">
+                            <div>
+                                <label class="formbold-form-label"> What factors are most important to you when
+                                    selecting a
+                                    service provider? </label>
+                                <select class="formbold-form-input" name="factors" id="factors" required>
+                                    <option value="" disabled selected>Select a factor</option>
+                                    <option value="Reputation">Reputation</option>
+                                    <option value="Cost">Cost</option>
+                                    <option value="Expertise">Expertise</option>
+                                    <option value="Responsiveness">Responsiveness</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="message" class="formbold-form-label"> Is there anything else you would like
+                                us
+                                to know about your needs or preferences for this service? </label>
+                            <textarea rows="6" name="message" id="message" placeholder="Type your message"
+                                class="formbold-form-input" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="formbold-form-btn-wrapper">
+                        <button class="formbold-back-btn">
+                            Back
+                        </button>
+
+                        <button class="formbold-btn">
+                            Next Step
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1675_1807)">
+                                    <path
+                                        d="M10.7814 7.33312L7.20541 3.75712L8.14808 2.81445L13.3334 7.99979L8.14808 13.1851L7.20541 12.2425L10.7814 8.66645H2.66675V7.33312H10.7814Z"
+                                        fill="white" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1675_1807">
+                                        <rect width="16" height="16" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+        }
+
+        .formbold-main-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 48px;
+            width: 100%;
+            height: 100vh;
+            background: url('https://user-images.githubusercontent.com/43387401/233118448-876cf658-3c36-458f-880f-575c80a81b48.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            animation: fade_in 1.5s ease-in;
+        }
+
+
+        .formbold-main-content {
+            width: 75%;
+            height: 75vh;
+            display: flex;
+            position: absolute;
+        }
+
+        .formbold-img-wrapper {
+            width: 30%;
+            height: inherit;
+            background: url('https://user-images.githubusercontent.com/43387401/233122862-d07203d8-83fe-47ea-aa49-fc14d6cb4cfd.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .formbold-form-wrapper {
+            width: 70%;
+            height: inherit;
+            background: white;
+            padding: 30px;
+        }
+
+        .formbold-steps {
+            padding-bottom: 18px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #DDE3EC;
+        }
+
+        .formbold-steps ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+
+        .formbold-steps li {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: #536387;
+        }
+
+        .formbold-steps li span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #DDE3EC;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: #536387;
+        }
+
+        .form-p {
+            font-size: 14px;
+        }
+
+        .formbold-steps li.active {
+            color: #010A3B;
+            ;
+        }
+
+        .formbold-steps li.active span {
+            background: #F06E30;
+            color: #FFFFFF;
+        }
+
+        .formbold-input-flex {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 22px;
+        }
+
+        .formbold-input-flex>div {
+            width: 50%;
+        }
+
+        .formbold-form-input {
+            width: 100%;
+            padding: 13px 22px;
+            border-radius: 5px;
+            border: 1px solid #DDE3EC;
+            background: #FFFFFF;
+            font-weight: 500;
+            font-size: 16px;
+            color: #536387;
+            outline: none;
+            resize: none;
+        }
+
+        .formbold-form-input:focus {
+            border-color: #F06E30;
+            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .formbold-form-label {
+            color: #010A3B;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .formbold-form-confirm {
+            border-bottom: 1px solid #DDE3EC;
+            padding-bottom: 35px;
+        }
+
+        .formbold-form-confirm p {
+            font-size: 16px;
+            line-height: 24px;
+            color: #536387;
+            margin-bottom: 22px;
+            width: 75%;
+        }
+
+        .formbold-form-confirm>div {
+            display: flex;
+            gap: 15px;
+        }
+
+        .formbold-confirm-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #FFFFFF;
+            border: 0.5px solid #DDE3EC;
+            border-radius: 5px;
+            font-size: 16px;
+            line-height: 24px;
+            color: #536387;
+            cursor: pointer;
+            padding: 10px 20px;
+            transition: all .3s ease-in-out;
+        }
+
+        .formbold-confirm-btn {
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+        }
+
+        .formbold-confirm-btn.active {
+            background: #F06E30;
+            color: #FFFFFF;
+        }
+
+        .formbold-form-step-1,
+        .formbold-form-step-2,
+        .formbold-form-step-3 {
+            display: none;
+        }
+
+        .formbold-form-step-1.active,
+        .formbold-form-step-2.active,
+        .formbold-form-step-3.active {
+            display: block;
+        }
+
+        .formbold-form-btn-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .formbold-back-btn {
+            cursor: pointer;
+            background: #FFFFFF;
+            border: none;
+            color: #010A3B;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            display: none;
+        }
+
+        .formbold-back-btn.active {
+            display: block;
+        }
+
+        .formbold-btn {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 16px;
+            border-radius: 5px;
+            padding: 10px 25px;
+            border: none;
+            font-weight: 500;
+            background-color: #F06E30;
+            color: white;
+            cursor: pointer;
+        }
+
+        .formbold-btn:hover {
+            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        @keyframes fade_in {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.9/sweetalert2.js"></script>
+    <script>
+        const stepMenuOne = document.querySelector('.formbold-step-menu1')
+        const stepMenuTwo = document.querySelector('.formbold-step-menu2')
+        const stepMenuThree = document.querySelector('.formbold-step-menu3')
+
+        const stepOne = document.querySelector('.formbold-form-step-1')
+        const stepTwo = document.querySelector('.formbold-form-step-2')
+        const stepThree = document.querySelector('.formbold-form-step-3')
+
+        const formSubmitBtn = document.querySelector('.formbold-btn')
+        const formBackBtn = document.querySelector('.formbold-back-btn')
+
+        formSubmitBtn.addEventListener("click", function (event) {
+            event.preventDefault()
+            if (stepMenuOne.className == 'formbold-step-menu1 active') {
+                event.preventDefault()
+
+                stepMenuOne.classList.remove('active')
+                stepMenuTwo.classList.add('active')
+
+                stepOne.classList.remove('active')
+                stepTwo.classList.add('active')
+
+                formBackBtn.classList.add('active')
+                formBackBtn.addEventListener("click", function (event) {
+                    event.preventDefault()
+
+                    stepMenuOne.classList.add('active')
+                    stepMenuTwo.classList.remove('active')
+
+                    stepOne.classList.add('active')
+                    stepTwo.classList.remove('active')
+
+                    formBackBtn.classList.remove('active')
+
+                })
+
+            } else if (stepMenuTwo.className == 'formbold-step-menu2 active') {
+                event.preventDefault()
+
+                stepMenuTwo.classList.remove('active')
+                stepMenuThree.classList.add('active')
+
+                stepTwo.classList.remove('active')
+                stepThree.classList.add('active')
+
+                formBackBtn.classList.remove('active')
+                formSubmitBtn.textContent = 'Submit'
+            } else if (stepMenuThree.className == 'formbold-step-menu3 active') {
+                document.querySelector('form').submit();
+            }
+        })
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 100,
+                    "density": {
+                        "enable": true,
+                        "value_area": 1000
+                    }
+                },
+                "color": {
+                    "value": ["#FFFFFF", "#FFFFFF", "#FFFFFF", "#FFFFFF"]
+                },
+
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#FFFFFF"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                    "image": {
+                        "src": "svg_logo.svg",
+                        "width": 100,
+                        "height": 100
+                    }
+                },
+                "opacity": {
+                    "value": 0.8,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 2,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 100,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 120,
+                    "color": "#FFFFFF",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": false
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+
+        var urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('success') && urlParams.get('success')) {
+            Swal.fire({
+                title: "Succesful",
+                html: "Your Request has been send succesful<br>Please check your email",
+                icon: "success",
+                showClass: {
+                    popup: 'animate__animated animate__fadeInDown'
+                },
+                hideClass: {
+                    popup: 'animate__animated animate__fadeOutUp'
+                },
+                confirmButtonColor: '#F06E30'
+            }).then((result) => {
+                console.log(window.location.hostname)
+                window.location.href = "https://mail.google.com/mail/";
+
+            })
+
+        }
+    </script>
+</body>
+
+</html>

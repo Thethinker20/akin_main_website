@@ -14,6 +14,9 @@ router.get("/services", (req, res) => {
   res.render("pages/services");
 });
 
+router.get("/contact_form", (req, res) => {
+  res.render("pages/contact_form", { layout: false });
+});
 router.get("/bemail_temp", (req, res) => {
   res.render("pages/business_temp_email", { layout: false });
 });

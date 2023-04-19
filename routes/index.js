@@ -10,6 +10,10 @@ router.get("/contactus", (req, res) => {
 router.get("/email_temp", (req, res) => {
   res.render("pages/email_template", { layout: false });
 });
+
+router.get("/contact_form", (req, res) => {
+  res.render("pages/contact_form", { layout: false });
+});
 router.get("/services", (req, res) => {
   res.render("pages/services");
 });

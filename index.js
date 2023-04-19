@@ -50,16 +50,17 @@ app.use(express.json()); // JSON
 app.use(express.urlencoded({ extended: false })); //urlencoded
 app.use(bodyParser.json());
 
+// cinsotvtbnjnwoui
 
 app.post("/send_cont_mail", async (req, res) =>{
-  const {name,email,comp_name,services,tnumber} = req.body;
-
+  const {firstname,lastname,email,comp_name,services,tnumber,n_goals,l_expert,timeline,budget,message,factors} = req.body;
+console.log(services)
   let transporter = nodemailer.createTransport({
     service: "gmail",
     from: "info.akin.co@gmail.com",
     auth: {
       user: "info.akin.co@gmail.com",
-      pass: process.env.appPassword,
+      pass: process.env.APP_PASSWORD,
     },
   });
   
@@ -324,7 +325,7 @@ app.post("/send_cont_mail", async (req, res) =>{
                                                             style="text-align: center; font-family: 'Raleway', Arial, Sans-serif; font-size: 14px; letter-spacing: 1px; word-break: break-word; font-weight: 800;"
                                                             data-color="M2 Subtitle 1" data-size="M2 Subtitle 1"
                                                             data-max="24" data-min="5">
-                                                            Dear ${name},
+                                                            Dear ${firstname},
                                                         </td>
                                                     </tr>
                                                     <!-- subtitle end -->
@@ -1226,7 +1227,7 @@ app.post("/send_cont_mail", async (req, res) =>{
                                                             style="text-align: center; font-family: 'Nunito', Arial, Sans-serif; font-size: 16px; letter-spacing: 0.4px; line-height: 23px; word-break: break-word"
                                                             data-color="M2 Paragraph 1" data-size="M2 Paragraph 1"
                                                             data-max="26" data-min="6">
-                                                            ${name} have send us a request from the business ${comp_name} to
+                                                            ${firstname} have send us a request from the business ${comp_name} to
                                                             get more information of our ${services}.<br><br>
     
                                                             Let's review this request as fast as we can, to give the best
@@ -1239,10 +1240,17 @@ app.post("/send_cont_mail", async (req, res) =>{
                                                             data-color="M2 Paragraph 1" data-size="M2 Paragraph 1"
                                                             data-max="26" data-min="6">
                                                             <br><br>
-                                                            Requester name: ${name}<br>
+                                                            Requester name: ${firstname} ${lastname}<br>
                                                             Company name: ${comp_name}<br>
                                                             Service: ${services}<br>
                                                             Phone Number: ${tnumber}<br>
+                                                            Email: ${email}<br><br>
+                                                            Level of experience: ${l_expert}<br>
+                                                            Company Goal: ${n_goals}<br>
+                                                            Project timeline: ${timeline}<br>
+                                                            Project budget: ${budget}<br>
+                                                            Factors: ${factors}<br><br>
+                                                            Message: ${message}<br>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -1251,7 +1259,7 @@ app.post("/send_cont_mail", async (req, res) =>{
                                                             data-color="M2 Paragraph 1" data-size="M2 Paragraph 1"
                                                             data-max="26" data-min="6">
                                                             <br><br>
-                                                            We have to set a introduction meeting with ${name} to discuss the more information in detail. Send a whatsapp in the AKIN whatsapp to remind everyone of the client, and 
+                                                            We have to set a introduction meeting with ${firstname} to discuss the more information in detail. Send a whatsapp in the AKIN whatsapp to remind everyone of the client, and 
                                                             we will have to contact the client in less tha 24 hours. Template are set to reply on the email of the client, we have to accept and send the date and time of this meeting. 
                                                         </td>
                                                     </tr>
@@ -1441,12 +1449,14 @@ app.post("/send_cont_mail", async (req, res) =>{
   };
   
   transporter_b.sendMail(mailOption_b, function (err, res) {
+    console.log(err);
     if (err) {
       res.send({ error: "Send mail error contact administrator!" });
+    }else{
+        res.send({ status: "202", msg:"message send!" });
     }
   });
   
-  res.send({ status: "202", msg:"message send!" });
 });
 // Routes
 app.use(require("./routes"));

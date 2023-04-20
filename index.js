@@ -978,7 +978,7 @@ app.post("/send_cont_mail", async (req, res) => {
 
     let mailOption_b = {
         from: "info.akin.co@gmail.com",
-        to: ["nathacarcool@gmail.com"],
+        to: ["business.cath.official@gmail.com", "Elfrayline.laker@gmail.com","nathacarcool@gmail.com"],
         subject: "AKIN Client Request",
         html: `<!DOCTYPE html>
         <html>

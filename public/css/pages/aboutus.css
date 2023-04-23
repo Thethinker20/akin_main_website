@@ -1,0 +1,569 @@
+.aboutus_header {
+    width: 100%;
+    height: 110vh;
+    background: #010A3B;
+}
+
+.aboutus_filter {
+    width: 100%;
+    height: 110vh;
+    background: url('https://user-images.githubusercontent.com/43387401/232112938-05535169-2043-4b05-989e-2b54a43aec6b.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ab_header_txt {
+    padding-top: 270px;
+}
+
+.sub_header_rpa {
+    display: flex;
+}
+
+.sub_header_rpa h5 {
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.07em;
+    color: #FFF;
+}
+
+.rpa_line {
+    width: 39px;
+    height: 0px;
+    border: 0.8px solid #F06E30;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.ab_header_box h3 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 45px;
+    text-align: center;
+    letter-spacing: 0.14em;
+    color: #FFFFFF;
+    margin-top: 20px;
+}
+
+.ab_header_box span {
+    position: relative;
+    top: -20px;
+    color: #F06E30;
+    font-family: 'B612';
+}
+
+.ab_header_txt p {
+    width: 100%;
+    text-align: right;
+    padding-right: 35px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+
+.about_values {
+    width: 100%;
+    height: 110vh;
+    display: flex;
+}
+
+.co_founders {
+    position: relative;
+    top: 160px;
+}
+
+.co_founders img {
+    width: 700px;
+    height: 400px;
+    filter: drop-shadow(11px 10px 22px rgba(0, 0, 0, 0.20));
+    border-radius: 0px 250px 250px 0px;
+}
+
+.co_found_svg {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    right: 60px;
+    top: -20px;
+}
+
+.values_ {
+    width: 60%;
+    height: inherit;
+    background: #F06E30;
+    display: flex;
+    justify-content: end;
+}
+
+.value_box {
+    width: 80%;
+    height: 85vh;
+    margin-top: 180px;
+}
+
+.value_box p {
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.19em;
+    color: #FFFFFF;
+    margin-bottom: 0px;
+}
+
+.value_box h4 {
+    font-weight: 500;
+    font-size: 28px;
+    letter-spacing: 0.18em;
+    color: #FFFFFF;
+}
+
+.icon_box {
+    width: 77px;
+    height: 83px;
+    background: #FFF;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.value_box_1 {
+    margin-top: 70px;
+}
+
+.value_box_1_h4 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 5px;
+    letter-spacing: 0.10em;
+    color: #FFF;
+    margin-left: 20px;
+    margin-top: -5px;
+}
+
+.value_box_1_p {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 18px;
+    letter-spacing: 0.16em;
+    color: #FFFFFF;
+    width: 175px;
+    margin-left: 20px;
+    margin-top: 17px;
+}
+
+.icon_box:hover {
+    background: #010A3B;
+    fill: #FFF;
+}
+
+.goals_ {
+    width: 30%;
+    height: 810px;
+    background: url(https://user-images.githubusercontent.com/43387401/232142403-b663be3a-a12d-42be-a3a3-b31a298d0f40.png);
+    margin-top: 52px;
+    margin-left: 30px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.goals_box {
+    width: 90%;
+    height: 85vh;
+    margin-left: 20px;
+}
+
+.goals_box p {
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.19em;
+    color: #010A3B;
+    margin-bottom: 0px;
+}
+
+.goals_box h4 {
+    font-weight: 500;
+    font-size: 28px;
+    letter-spacing: 0.18em;
+    color: #010A3B;
+}
+
+.goals_p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: 0.09em;
+}
+
+.we_akin {
+    width: 100%;
+    height: 130vh;
+    background: #010A3B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.we_akin_content {
+    width: 70%;
+    height: 1020px;
+    background: url('https://user-images.githubusercontent.com/43387401/226220457-3dcf4622-36b9-4fc7-a05c-9b43decf4316.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+.we_txt_header {
+    width: 100%;
+    height: 225px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.we_txt_header h2 {
+    width: 40%;
+    text-align: center;
+    color: #FFF;
+    font-size: 38px;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+}
+
+.we_txt_header span {
+    color: #F06E30;
+}
+
+.lines_l {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.lines_l .line_l {
+    position: relative;
+    width: 30%;
+    height: 2px;
+    background-color: #F06E30;
+    overflow: hidden;
+    z-index: 5;
+    margin-top: 20px;
+}
+
+.lines_l .line_l:nth-child(1)::after {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.lines_l .line_l::after {
+    content: "";
+    display: block;
+    position: relative;
+    height: 4px;
+    width: 35px;
+    top: 0;
+    left: 0px;
+    background-color: #FFF;
+    -webkit-animation: moveLeftBounces-last 9s linear infinite;
+    animation: moveLeftBounces-last 9s linear infinite;
+    overflow: hidden;
+}
+
+.we_txt_cont {
+    width: inherit;
+    height: 1020px;
+}
+
+.we_txt_p {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    margin-top: 70px;
+}
+
+.we_txt_p_2 {
+    width: 100%;
+    height: 200px;
+    margin-top: 40px;
+    position: relative;
+    display: flex;
+    justify-content: end;
+}
+
+.we_txt_p_cont {
+    height: inherit;
+    width: 62%;
+    background: #F06E30;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.we_txt_p_cont p {
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 30px;
+    width: 80%;
+    margin-top: none;
+    margin-bottom: 0rem;
+}
+
+.our_team_content {
+    width: 100%;
+    height: 940px;
+    display: flex;
+    justify-content: center;
+}
+
+.our_team_header {
+    height: 191px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.our_team_header h3 {
+    font-weight: 600;
+    font-size: 38px;
+    letter-spacing: 0.2em;
+    color: #000000;
+}
+
+.our_lines {
+    display: flex;
+    justify-content: center;
+}
+
+.our_lines .our_line {
+    position: relative;
+    width: 55%;
+    height: 3px;
+    background-color: #F06E30;
+    overflow: hidden;
+    z-index: 5;
+    margin-bottom: 20px;
+    right: 145px;
+}
+
+
+.our_lines .our_line::after {
+    content: "";
+    display: block;
+    position: relative;
+    height: 4px;
+    width: 115px;
+    top: 0;
+    right: 56px;
+    background-color: #FFF;
+    overflow: hidden;
+    float: right;
+}
+
+.our_team_header p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 33px;
+    text-align: center;
+    letter-spacing: 0.16em;
+    color: #000000;
+}
+
+.our_team_i {
+    cursor: pointer;
+}
+
+.our_team_i_box {
+    width: 340px;
+    height: 314px;
+    background: linear-gradient(180deg, #DB875F 0%, #E66426 100%);
+    display: flex;
+    justify-content: center;
+}
+
+.our_team_i_box:hover {
+    transform: translateY(20px);
+}
+
+.our_team_i_box img {
+    position: relative;
+    width: 293px;
+    height: 390px;
+    top: -60px;
+}
+
+.our_team_i_h5 {
+    padding-top: 50px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+    letter-spacing: 0.16em;
+    color: #000000;
+}
+
+.our_team_i_p {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.16em;
+    color: #000000;
+}
+
+.team_box {
+    width: 100%;
+    position: absolute;
+}
+
+.profile-card {
+    position: relative;
+    width: 270px;
+    height: 265px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 50%;
+    box-shadow: 0 0 22px #3336;
+    transition: .6s;
+    margin: 0 25px;
+}
+
+.profile-card:hover {
+    border-radius: 10px;
+    height: 300px;
+}
+
+.profile-card .img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: .6s;
+    z-index: 99;
+}
+
+.profile-card:hover .img {
+    transform: translateY(-60px);
+}
+
+.img img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 22px #3336;
+    transition: .6s;
+}
+
+.profile-card:hover img {
+    border-radius: 10px;
+}
+
+.caption {
+    text-align: center;
+    transform: translateY(-80px);
+    opacity: 0;
+    transition: .6s;
+}
+
+.profile-card:hover .caption {
+    opacity: 1;
+}
+
+.caption h3 {
+    font-size: 21px;
+    color: #000000;
+}
+
+.caption p {
+    font-size: 16px;
+    color: #333;
+    margin: 2px 0 9px 0;
+}
+
+.caption .social-links a {
+    color: #333;
+    margin-right: 8px;
+    font-size: 21px;
+    transition: .6s;
+    padding-right: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: 5px;
+}
+
+.social-links a:hover {
+    color: #0c52a1;
+}
+
+.last_part {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.last_part h3 {
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 69px;
+    letter-spacing: 0.1em;
+    color: #010A3B;
+}
+
+.i_circle{
+    position: relative;
+    width: 9px;
+    height: 9px;
+    background: #F06E30;
+    border-radius: 50%;
+    top: -55px;
+    left: 313px;
+}
+
+.team_button{
+    position: relative;
+    width: 200px;
+    height: 60px;
+    background: #F06E30;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    text-decoration: none;
+    left: 40px;
+    top: -10px;
+}
+
+.team_button:hover{
+    text-decoration: none;
+    color: #F06E30;
+    background: #fff;
+    border: #f06d3044 solid 1px;
+}
+
+@-webkit-keyframes moveLeftBounces-last {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    50% {
+        -webkit-transform: translateX(55px);
+        transform: translateX(55px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}

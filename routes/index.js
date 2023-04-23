@@ -7,6 +7,9 @@ router.get("/home", (req, res) => {
 router.get("/contactus", (req, res) => {
   res.render("pages/contactus");
 });
+router.get("/aboutus", (req, res) => {
+  res.render("pages/aboutus");
+});
 router.get("/email_temp", (req, res) => {
   res.render("pages/email_template", { layout: false });
 });

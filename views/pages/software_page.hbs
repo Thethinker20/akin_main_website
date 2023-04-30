@@ -1,0 +1,151 @@
+<link href="css/pages/soft_dev.css" type='text/css' rel="stylesheet" />
+<section class="soft_back">
+    <div class="soft_overflow">
+        <div class="container">
+            <div class="soft_header">
+                <h3>Software Developer</h3>
+                <p>Web, Desktop & Phone</p>
+            </div>
+        </div>
+        <div class="soft_box_cont">
+            <div class="soft_box">
+                <p>Web, Desktop & Phone</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="akin_dev">
+    <div class="akin_dev_header">
+        <h3>Custom Software Development</h3>
+        <p class="akin_dev_header_p">We create customized software solutions that are tailored to meet your
+            specific business needs.</p>
+    </div>
+    <div class="akin_tab">
+        <div class="akin_tab_cont">
+            <div class="akin_tab_cont_overlay">
+                <div class="akin_dev_boxL"></div>
+                <div class="akin_dev_box_c1" id="akin_dev_box_c1">
+                    <div class="akin_dev_box">
+                        <h3>Custom Software Development</h3>
+                        <div class="akin_line"></div>
+                        <p class="akin_dev_header_p">We create customized software solutions that are tailored to meet
+                            your specific business
+                            needs.
+                            Tell
+                            us your idea and we will make a good and stable software for your daily use</p>
+
+                    </div>
+                </div>
+                <div class="akin_dev_box_c2" id="akin_dev_box_c2">
+                    <div class="akin_dev_box">
+                        <h3>Software Integration</h3>
+                        <div class="akin_line"></div>
+                        <p class="akin_dev_header_p">We create customized software solutions that are tailored to meet
+                            your specific business
+                            needs.
+                            Tell
+                            us your idea and we will make a good and stable software for your daily use</p>
+
+                    </div>
+                </div>
+                <div class="akin_dev_box_c3" id="akin_dev_box_c3">
+                    <div class="akin_dev_box">
+                        <h3>Software Maintenance and Support</h3>
+                        <div class="akin_line"></div>
+                        <p class="akin_dev_header_p">We create customized software solutions that are tailored to meet
+                            your specific business
+                            needs.
+                            Tell
+                            us your idea and we will make a good and stable software for your daily use</p>
+
+                    </div>
+                </div>
+                <div class="akin_dev_boxR"></div>
+            </div>
+        </div>
+        <div class="akin_tabs">
+            <img class="akin_tabs_back"
+                src="https://user-images.githubusercontent.com/43387401/235376008-6d2bc043-3dd8-4a7f-9515-cd6ef12ac056.png"
+                alt="">
+            <div class="akin_tabs_cont">
+                <h2>AKIN <span>Software</span> Development</h2>
+                <p class="akin_tabs_cont_p">Click one of use -></p>
+                <div class="lines_l">
+                    <div class="line_l"></div>
+                </div>
+                <div class="text_p_change">
+                    <div class="p_change active" id="p_change_1">Custom Software Development</div>
+                    <div class="p_change" id="p_change_2">Software Integration</div>
+                    <div class="p_change" id="p_change_3">Software Maintenance and Support</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+<script>
+
+    var b01 = document.getElementById('akin_dev_box_c1');
+    var b02 = document.getElementById('akin_dev_box_c2');
+    var b03 = document.getElementById('akin_dev_box_c3');
+
+    $('#p_change_1').on('click', function () {
+        if ($("#p_change_2").hasClass("active")) {
+            $("#p_change_2").removeClass('active');
+            $('#p_change_1').addClass('active');
+            b02.style.display = 'none';
+            b02.style.opacity = 0;
+            b01.style.display = 'flex';
+            b01.style.opacity = 1;
+            b01.style.animation = "scroll_up 2s ease";
+        } else if ($("#p_change_3").hasClass("active")) {
+            $("#p_change_3").removeClass('active');
+            $('#p_change_1').addClass('active');
+            b03.style.display = 'none';
+            b03.style.opacity = 0;
+            b01.style.display = 'flex';
+            b01.style.opacity = 1;
+            b01.style.animation = "scroll_up 2s ease";
+        }
+    });
+    $('#p_change_2').on('click', function () {
+        if ($("#p_change_1").hasClass("active")) {
+            $("#p_change_1").removeClass('active');
+            $('#p_change_2').addClass('active');
+            b01.style.display = 'none';
+            b01.style.opacity = 0;
+            b02.style.display = 'flex';
+            b02.style.opacity = 1;
+            b02.style.animation = "scroll_up 2s ease";
+        } else if ($("#p_change_3").hasClass("active")) {
+            $("#p_change_3").removeClass('active');
+            $('#p_change_2').addClass('active');
+            b03.style.display = 'none';
+            b03.style.opacity = 0;
+            b02.style.display = 'flex';
+            b02.style.opacity = 1;
+            b02.style.animation = "scroll_up 2s ease";
+        }
+
+    });
+    $('#p_change_3').on('click', function () {
+        if ($("#p_change_1").hasClass("active")) {
+            $("#p_change_1").removeClass('active');
+            $('#p_change_3').addClass('active');
+            b01.style.display = 'none';
+            b01.style.opacity = 0;
+            b03.style.display = 'flex';
+            b03.style.opacity = 1;
+            b03.style.animation = "scroll_up 2s ease";
+        } else if ($("#p_change_2").hasClass("active")) {
+            $("#p_change_2").removeClass('active');
+            $('#p_change_3').addClass('active');
+            b02.style.display = 'none';
+            b02.style.opacity = 0;
+            b03.style.display = 'flex';
+            b03.style.opacity = 1;
+            b03.style.animation = "scroll_up 2s ease";
+        }
+
+    });
+</script>

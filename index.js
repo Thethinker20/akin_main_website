@@ -1463,7 +1463,8 @@ app.post("/send_cont_mail", async (req, res) => {
             res.send({ error: "Send mail error contact administrator!" });
         }
     });
-    res.redirect("/contact_form?success=true&message=Request send succesfull")
+    
+    res.redirect("/contact_form?success=true&message=Request send succesfull");
 });
 // Routes
 app.use(require("./routes"));

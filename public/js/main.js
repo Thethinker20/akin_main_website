@@ -152,6 +152,29 @@ $('#submit_cont').on('click', function(){
   window.location.href = "/contact_form";
 })
 
+const modal_v = document.getElementById('modal_video');
+
+$("#deliver_play_button").on("click", function(){
+
+  modal_v.style.opacity = 1;
+
+  modal_v.style.display = 'flex';
+
+  this.classList.toggle('active');
+
+});
+
+ 
+
+$("#modal_video").on("click", function(){
+
+  modal_v.style.opacity = 0;
+
+  modal_v.style.display = 'none';
+
+  document.getElementById('deliver_play_button').classList.toggle('active');
+
+});
 
 //send form
 // const form = document.getElementById("cont_form");

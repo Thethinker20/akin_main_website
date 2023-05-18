@@ -5,6 +5,7 @@
 body {
     font-family: 'Fira Sans';
     color: #686868;
+    overflow-x: hidden;
 }
 
 .header_home {
@@ -277,7 +278,7 @@ body {
     width: 510px;
     height: 490px;
     border-radius: 50%;
-    background: url('https://user-images.githubusercontent.com/43387401/228665008-d2ab2436-3de9-4bb1-949a-7383702e3eab.png');
+    background: url('https://github.com/Thethinker20/akin_main_website/assets/43387401/a6ba46d7-c3e7-4098-9dc8-630a158a0739');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

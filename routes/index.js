@@ -10,14 +10,16 @@ router.get("/contactus", (req, res) => {
 router.get("/aboutus", (req, res) => {
   res.render("pages/aboutus");
 });
+
+router.get("/services", (req, res) => {
+  res.render("pages/services");
+});
+
 router.get("/soft_dev", (req, res) => {
   res.render("pages/software_page", { layout:false });
 });
 router.get("/email_temp", (req, res) => {
   res.render("pages/email_template", { layout: false });
-});
-router.get("/services", (req, res) => {
-  res.render("pages/services");
 });
 
 router.get("/contact_form", (req, res) => {

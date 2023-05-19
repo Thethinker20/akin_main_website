@@ -28,7 +28,7 @@ if (activePage == "/home") {
 
       main.style.display = 'block';
       setTimeout(() => main.style.opacity = 1, 100);
-    }, 2000);
+    }, 3500);
   }
   init();
 } else{

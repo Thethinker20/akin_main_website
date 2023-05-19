@@ -3,21 +3,21 @@ const loader = document.querySelector('#particles-js');
 const main = document.querySelector('.main');
 
 const activePage = window.location.pathname;
-const navLinks = document.querySelectorAll('.nav-horizontal a').
-  forEach(link => {
-    if (link.href.includes(`${activePage}`)) {
-      link.classList.add('active-n');
-      var title_l = activePage.replace('/', '');
-      document.getElementById('title').innerHTML = title_l.charAt(0).toUpperCase() + title_l.slice(1);
-      // var path = "css";
-      // var style = document.createElement('link');
-      // style.rel = 'stylesheet';
-      // style.type = 'text/css';
-      // style.media = 'screen';
-      // style.href = path + '/pages/services.css';
-      // document.getElementsByTagName('head')[0].appendChild(style);
-    }
-  })
+// const navLinks = document.querySelectorAll('.nav-horizontal a').
+//   forEach(link => {
+//     if (link.href.includes(`${activePage}`)) {
+//       link.classList.add('active-n');
+//       var title_l = activePage.replace('/', '');
+//       document.getElementById('title').innerHTML = title_l.charAt(0).toUpperCase() + title_l.slice(1);
+//       // var path = "css";
+//       // var style = document.createElement('link');
+//       // style.rel = 'stylesheet';
+//       // style.type = 'text/css';
+//       // style.media = 'screen';
+//       // style.href = path + '/pages/services.css';
+//       // document.getElementsByTagName('head')[0].appendChild(style);
+//     }
+//   })
 
 
 if (activePage == "/home") {

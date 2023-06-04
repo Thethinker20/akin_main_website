@@ -542,6 +542,10 @@
     align-items: center;
 }
 
+.mobile_l img{
+height: 560px;
+}
+
 .mobile_r{
     width: 50%;
     height: inherit;

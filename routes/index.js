@@ -16,7 +16,10 @@ router.get("/services", (req, res) => {
 });
 
 router.get("/soft_dev", (req, res) => {
-  res.render("pages/software_page", { layout:false });
+  res.render("pages/software_page");
+});
+router.get("/rpa", (req, res) => {
+  res.render("pages/rpa");
 });
 router.get("/email_temp", (req, res) => {
   res.render("pages/email_template", { layout: false });

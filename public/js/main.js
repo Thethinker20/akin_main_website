@@ -16,7 +16,7 @@ if (activePage == "/home") {
     }, 300);
   }
   init();
-} else if (activePage = "/rpa") {
+} else if (activePage == "/rpa") {
   var title_l = activePage.replace('/', '');
   document.getElementById('title').innerHTML = title_l.charAt(0).toUpperCase() + title_l.slice(1);
   loader.style.opacity = 0;

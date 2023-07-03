@@ -1861,7 +1861,12 @@ svg {
         line-height: 37px;
     }
     
+    .shape-box {
+        height: 370px;
+    }
 
+    .product_section {
+        height: 2104px;}
 }
 
 

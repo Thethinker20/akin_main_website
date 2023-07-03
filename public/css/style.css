@@ -1713,6 +1713,9 @@ svg {
 
     .nav_bar_con {
         height: 60px;
+        position: fixed;
+    top: 0;
+    overflow: hidden;
     }
 
     .logo-cont {
@@ -1856,6 +1859,8 @@ svg {
         width: 93%;
         font-size: 36px;
         line-height: 37px;
+    }
+    
 
 }
 

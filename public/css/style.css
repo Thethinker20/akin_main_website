@@ -30,6 +30,15 @@ body {
     box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.36);
 }
 
+.nav_bar_con {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    z-index: 9999;
+}
+
 .nav-link {
     width: 60%;
 }
@@ -43,6 +52,17 @@ body {
 
 .nav-horizontal li {
     float: left;
+}
+
+.nav-button {
+    display: none;
+    margin-right: 2rem;
+    padding: 0;
+    outline: none;
+    border: none;
+    color: #000000;
+    background: transparent;
+    cursor: pointer;
 }
 
 .active-n {
@@ -71,7 +91,7 @@ body {
 
 
 
-.nav_sub{
+.nav_sub {
     display: none;
     margin: 0;
     padding: 0;
@@ -82,11 +102,11 @@ body {
     align-items: flex-start;
 }
 
-.serve:hover .nav_sub{
+.serve:hover .nav_sub {
     display: flex;
 }
 
-.nav_sub a{
+.nav_sub a {
     padding: 13px 16px;
     text-decoration: none;
     font-weight: 400;
@@ -99,7 +119,7 @@ body {
     border-left: 7px solid #00053b;
 }
 
-.nav_sub a:hover{
+.nav_sub a:hover {
     background: #010A3B;
     color: white;
 }
@@ -146,8 +166,12 @@ body {
     color: #FCFCFC;
 }
 
+.header_b_cont{
+    position: relative;
+    top: 230px;
+}
+
 .p-txt {
-    padding-top: 230px;
     display: flex;
 }
 
@@ -1638,7 +1662,8 @@ svg {
     font-weight: 300;
     background: #0000006a;
     display: none;
-    animation: fadeIn 1.5s ease-in-out;}
+    animation: fadeIn 1.5s ease-in-out;
+}
 
 .modalView {
     width: 350px;
@@ -1676,6 +1701,164 @@ svg {
     font-weight: 400;
     padding-top: 25px;
 }
+
+
+
+@media (max-width: 768px) {
+    .navb {
+        top: 0px;
+        width: 100%;
+        display: flex;
+    }
+
+    .nav_bar_con {
+        height: 60px;
+    }
+
+    .logo-cont {
+        justify-content: flex-end;
+        padding-left: 230px;
+    }
+
+    .logo {
+        width: 42px;
+        height: 42px;
+    }
+
+    .nav-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 35px;
+    }
+
+    .b_header {
+        display: none;
+        opacity: 0;
+    }
+
+    .nav-link {
+        position: absolute;
+        /* top: 5rem; */
+        left: -245%;
+        flex-direction: column;
+        padding: 3rem;
+        width: 12rem;
+        height: calc(51vh - 5rem);
+        background: #FFFFFF;
+        transition: 0.5s ease;
+    }
+
+    /* show class will make .menu-container slides in */
+    .show {
+        left: -52px;
+    }
+
+    .nav-horizontal {
+        width: 135px;
+    }
+
+    .active-n {
+        color: black;
+        border-bottom: none;
+    }
+
+    .nav-horizontal li .nav_i:hover {
+        transition: .2s;
+        transform: translateX(12px);
+    }
+
+    .header_b_cont{
+        top: 160px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .p-txt-line {
+        top: 9px;
+    }
+
+    .p-txt-text {
+        font-size: 13px;
+    }
+
+    .main-txt {
+        font-size: 45px;
+        line-height: 58px;
+        text-align: center;
+    }
+
+    .under-txt {
+        font-size: 16px;
+        line-height: 21px;
+        text-align: center;
+        width: 90%;
+    }
+
+    .header_right_2 {
+        top: 230px;
+    }
+
+    .header_r_i {
+        width: auto;
+        height: 340px;
+    }
+
+    .header_r_back1{
+        width: 0px;
+        height: 0px;
+    }
+
+    .header_r_back2{
+        width: 0px;
+        height: 0px;
+    }
+
+    .lines{
+        width: 30%;
+    }
+
+    .lines .line{
+        width: 100%;
+    }
+
+    .qoute_section {
+        height: 50vh;
+        align-items: flex-end;
+    }
+
+    .qoute_content {
+        width: 80%;
+    }
+
+    .qoute_section h3 {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .qoute_ {
+        font-size: 48px;
+        top: 11px;
+        left: -2px;
+    }
+
+    .qoute_f {
+        position: relative;
+        font-family: 'Playball';
+        font-size: 48px;
+        color: #FF9600;
+        top: 10px;
+    }
+
+    .ps_txt {
+        width: 93%;
+        font-size: 36px;
+        line-height: 37px;
+
+}
+
 
 @keyframes ripple {
 
@@ -1800,10 +1983,12 @@ svg {
     }
 }
 
-@keyframes fadeIn{
-    0%{
+@keyframes fadeIn {
+    0% {
         opacity: 0;
-    }100%{
+    }
+
+    100% {
         opacity: 1;
     }
 }

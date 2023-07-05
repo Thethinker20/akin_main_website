@@ -1743,7 +1743,7 @@ svg {
     .nav-link {
         position: fixed;
         /* top: 5rem; */
-        left: -245%;
+        left: -50%;
         flex-direction: column;
         padding: 3rem;
         width: 12rem;

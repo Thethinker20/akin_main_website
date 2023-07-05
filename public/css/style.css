@@ -166,7 +166,7 @@ body {
     color: #FCFCFC;
 }
 
-.header_b_cont{
+.header_b_cont {
     position: relative;
     top: 230px;
 }
@@ -1714,8 +1714,8 @@ svg {
     .nav_bar_con {
         height: 60px;
         position: fixed;
-    top: 0;
-    overflow: hidden;
+        top: 0;
+        overflow: hidden;
     }
 
     .logo-cont {
@@ -1741,7 +1741,7 @@ svg {
     }
 
     .nav-link {
-        position: absolute;
+        position: fixed;
         /* top: 5rem; */
         left: -245%;
         flex-direction: column;
@@ -1754,7 +1754,7 @@ svg {
 
     /* show class will make .menu-container slides in */
     .show {
-        left: -52px;
+        left: 0px;
     }
 
     .nav-horizontal {
@@ -1771,7 +1771,7 @@ svg {
         transform: translateX(12px);
     }
 
-    .header_b_cont{
+    .header_b_cont {
         top: 160px;
         display: flex;
         flex-direction: column;
@@ -1809,21 +1809,21 @@ svg {
         height: 340px;
     }
 
-    .header_r_back1{
+    .header_r_back1 {
         width: 0px;
         height: 0px;
     }
 
-    .header_r_back2{
+    .header_r_back2 {
         width: 0px;
         height: 0px;
     }
 
-    .lines{
+    .lines {
         width: 30%;
     }
 
-    .lines .line{
+    .lines .line {
         width: 100%;
     }
 
@@ -1860,13 +1860,73 @@ svg {
         font-size: 36px;
         line-height: 37px;
     }
-    
+
     .shape-box {
         height: 370px;
     }
 
     .product_section {
-        height: 2104px;}
+        height: 2104px;
+    }
+
+    .misvis {
+        height: 100vh;
+    }
+
+    .mis_img {
+        width: 340px;
+        height: 215px;
+        border-radius: 104px 0px 10px 10px;
+        margin-top: 41px;
+        margin-left: 13px;
+    }
+
+    .mis_t_content {
+        margin-top: 0px;
+        height: 441px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .mis_t_content h3 {
+        font-size: 23px;
+        line-height: 29px;
+        text-align: center;
+    }
+    .mis_t_content p {
+        width: 85%;
+        text-align: center;
+    }
+    .bullet_point {
+        display: none;
+        opacity: 0;
+    }
+    .mv_t{
+        width: 100% !important;
+    }
+
+    .glode_back {
+        width: 329px;
+        margin-top: 390px;
+    }
+
+    .process-thumb {
+        left: 26px;
+    }
+
+    .footer-home {
+        height: 100%;
+        padding-left: 26px;
+    }
+    .footer_box {
+        padding-top: 20px;
+        padding-bottom: 25px;
+    }
+    .nav_sub {
+        width: 95%;
+    }
 }
 
 

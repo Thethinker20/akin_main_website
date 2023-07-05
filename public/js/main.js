@@ -13,7 +13,7 @@ if (activePage == "/home") {
 
       main.style.display = 'block';
       setTimeout(() => main.style.opacity = 1, 100);
-    }, 300);
+    }, 3500);
   }
   init();
 } else if (activePage == "/rpa") {

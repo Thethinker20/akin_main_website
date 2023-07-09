@@ -608,6 +608,11 @@ header {
   justify-content: end;
 }
 
+.faq_more_content {
+  width: 75%;
+}
+
+
 .faq_content {
   width: 80%;
 }
@@ -723,6 +728,110 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .title_wrapper h1 {
+    font-size: 45px;
+  }
+
+  .what_rpa {
+    height: 75vh;
+
+  }
+
+  .what_rpa_content {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .what_p2 {
+    text-align: center;
+  }
+
+  .rpa_benefit {
+    height: 65vh;
+  }
+
+  .content_benefit {
+    display: none;
+  }
+
+  .content_b_txt {
+    display: none;
+  }
+
+  .b_t {
+    font-size: 18px;
+  }
+
+  .sub_header_rpa h5 {
+    font-size: 15px;
+  }
+
+  .rpa_in_akin {
+    height: 100%;
+  }
+
+  .rpa_in_akin_content {
+    height: 95vh;
+  }
+
+  .rpa_in_akin_box {
+    height: 100vh;
+    margin-left: 0px;
+    margin-top: 100px;
+  }
+
+  .rpa_akin_background {
+    height: 55vh;
+    align-items: center;
+  }
+
+  .faq_content {
+    width: 100%;
+  }
+
+  .rpa_globe_back {
+    width: 316px;
+    left: 0px;
+  }
+
+  .faq-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .faq_more_content {
+    width: 100%;
+  }
+
+  .faq_more {
+    z-index: 0;
+    font-size: 20px;
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .text-box {
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  .btn:link,
+  .btn:visited {
+    position: relative;
+  }
+  .metodologia {
+    height: 50vh;
+}
 }
 
 @keyframes moveInBottom {

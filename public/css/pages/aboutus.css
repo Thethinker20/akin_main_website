@@ -543,12 +543,141 @@
     left: 40px;
     top: -10px;
 }
+.pt_{
+    padding-top: 70px;
+}
+.pt_team{
+    padding-top: 115px;
+}
 
 .team_button:hover{
     text-decoration: none;
     color: #F06E30;
     background: #fff;
     border: #f06d3044 solid 1px;
+}
+
+@media (max-width: 768px) {
+    .aboutus_header {
+        height: 90vh;
+    }
+    .aboutus_filter {
+        height: 90vh;
+    }
+    .ab_header_txt {
+        width: 88%;
+    }
+    .ab_header_box span {
+        top: -7px;
+    }
+    .co_founders img {
+        width: 360px;
+        height: 250px;
+    }
+    .co_found_svg {
+        right: 58px;
+        top: -50px;
+    }
+    .co_found_svg svg{
+        width: 18%;
+    }
+    .co_founders {
+        top: 135px;
+    }
+    .about_values {
+        flex-direction: column;
+        height: 100%;
+    }
+    .value_box_1 {
+        margin-top: 45px;
+    }    
+    .value_box {
+        width: 70%;
+        height: inherit;
+    }
+    .values_ {
+        width: 100%;
+        justify-content: center;
+    }
+    .value_box_1_h4 {
+        line-height: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+    .value_box_cont{
+        margin-top: 20px;
+    }
+    .value_box_1_p {    
+        width: 90%;
+        margin-left: 0px;
+        margin-bottom: 17px;
+    }
+.pt_{
+    padding-top: 5px;
+}
+.goals_ {
+    width: 100%;
+    height: 490px;
+    margin-top: 0px;
+    margin-left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.goals_box {
+    width: 90%;
+    height: 32vh;
+    margin-left: 0px;
+}
+.we_txt_header h2 {
+    width: 100%;
+    font-size: 30px;
+}
+.we_txt_p_cont {
+    width: 91%;
+    height: 224px;
+}
+.we_txt_p_cont p {
+    font-size: 17px;
+    line-height: 21px;
+}
+.our_team_content {
+    height: auto;
+}
+.our_team_header {
+    height: 247px;
+    margin-top: 50px;
+}
+.our_lines .our_line {
+    width: 250px;
+    right: 0px;
+}
+.our_team_header p {
+    font-size: 14px;
+    line-height: 28px;
+}
+.team_box {
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+}
+.pt_team{
+    padding-top: 35px;
+}
+.last_part {
+    height: 13%;
+    flex-direction: column;
+}
+.team_button {
+    left: 0px;
+    top: -68px;
+}
+.i_circle {
+    width: 9px;
+    height: 13px;
+    top: 20px;
+    left: -47px;
+}
 }
 
 @-webkit-keyframes moveLeftBounces-last {

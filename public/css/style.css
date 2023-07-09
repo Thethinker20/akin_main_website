@@ -1927,6 +1927,17 @@ svg {
     .nav_sub {
         width: 95%;
     }
+    .contact_cont {
+        width: 86%;
+        height: 80vh;
+    }
+    .cont_form_detail {
+        display: none;
+    }
+    .cont_form_box {
+        height: 635px;
+        width: 97%;
+    }
 }
 
 

@@ -21,6 +21,12 @@ router.get("/soft_dev", (req, res) => {
 router.get("/rpa", (req, res) => {
   res.render("pages/rpa");
 });
+router.get("/courses", (req, res) => {
+  res.render("pages/courses");
+});
+router.get("/business", (req, res) => {
+  res.render("pages/business");
+});
 router.get("/email_temp", (req, res) => {
   res.render("pages/email_template", { layout: false });
 });

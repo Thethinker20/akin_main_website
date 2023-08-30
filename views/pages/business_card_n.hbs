@@ -71,7 +71,7 @@
 
     .all_info {
         width: 90%;
-        height: 100%;
+        height: 112%;
     }
 
     .line_cont {
@@ -169,7 +169,7 @@
         animation: dot_animation 1.2s ease-in;
         animation-fill-mode: forwards;
         animation-delay: 5s;
-        top: 380px;
+        top: 325px;
         left: 209px;
         opacity: 0;
     }
@@ -395,12 +395,12 @@
     var loader = document.getElementById('init_b');
     var main = document.getElementById('business_card_cont');
     setTimeout(() => {
-        document.getElementById("init_b").style.animationName = "fadeOut";
-        setTimeout(() => main.style.display = 'block',100);
-        document.getElementById("business_card_cont").style.animationName = "fadeIn";
-        loader.style.display = 'none'
-        setTimeout(() => main.style.opacity = 1,200);
-    }, 6800);
+                document.getElementById("init_b").style.animationName = "fadeOut";
+                setTimeout(() => main.style.display = 'block', 100);
+                document.getElementById("business_card_cont").style.animationName = "fadeIn";
+                loader.style.display = 'none'
+                setTimeout(() => main.style.opacity = 1, 200);
+            }, 6800)
 </script>
 
 </html>

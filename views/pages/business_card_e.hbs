@@ -30,7 +30,6 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        border-radius: 20px;
     }
 
     .co_wave {
@@ -59,7 +58,7 @@
     .info_content {
         position: absolute;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         background: white;
         padding-top: 25px;
         display: flex;
@@ -146,6 +145,7 @@
     .business_card_cont {
         display: none;
         opacity: 0;
+        animation: 1s ease-in;
     }
 
     .init_b {
@@ -156,6 +156,8 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        animation: 2s ease-in;
+        animation-fill-mode: forwards;
     }
 
     .dot_ball {
@@ -164,39 +166,45 @@
         background: #ff7100;
         border-radius: 50%;
         position: absolute;
-        top: 376px;
-        left: 210px;
-        animation: dot_animation 5s ease-in;
+        animation: dot_animation 1.2s ease-in;
+        animation-fill-mode: forwards;
+        animation-delay: 5s;
+        top: 380px;
+        left: 209px;
+        opacity: 0;
     }
 
     #A {
-        animation: drop_in 5s ease-in;
+        animation: drop_in 2.5s ease-in;
     }
 
     #K-1 {
-        animation: drop_in 6s ease-in;
+        animation: drop_in 3s ease-in;
     }
 
     #k {
-        animation: drop_in 6s ease-in;
+        animation: drop_in 3s ease-in;
     }
 
     #I {
-        animation: drop_in 7s ease-in;
+        animation: drop_in 4s ease-in;
     }
 
     #N {
-        animation: drop_in 8s ease-in;
+        animation: drop_in 5s ease-in;
     }
 
     .h4_init {
         color: black;
         font-size: 16px;
-        font-weight: 400;
-        animation: fadeIn 2s ease-in;
+        font-weight: 300;
+        animation: fade_up 2.1s ease-in;
+        animation-delay: 2s;
+        opacity: 0;
+        animation-fill-mode: forwards;
     }
 
-    .business_cont{
+    .business_cont {
         height: 100vh;
         width: 100%;
     }
@@ -207,13 +215,17 @@
             opacity: 0;
         }
 
-        50% {
-            transform: translateY(0px);
+        25% {
+            transform: translateY(30px);
             opacity: 1;
         }
 
+        50% {
+            transform: translateY(-20px);
+        }
+
         75% {
-            transform: translateY(-10px);
+            transform: translateY(10px);
         }
 
         100% {
@@ -243,30 +255,40 @@
         }
     }
 
-    @keyframes dot_animation {
+    @keyframes fade_up {
         0% {
-            top: 452px;
-            left: 140px;
-        }
-
-        25% {
-            top: 452px;
-            left: 260px;
-        }
-
-        50% {
-            top: 405px;
-            left: 295px;
-        }
-
-        75% {
-            top: 357px;
-            left: 230px;
+            transform: translateY(10px);
+            opacity: 0;
         }
 
         100% {
-            top: 376px;
-            left: 210px;
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+
+    @keyframes dot_animation {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+
+        25% {
+            transform: translateY(2px);
+        }
+
+        50% {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+
+        75% {
+            transform: translateY(0px);
+        }
+
+        100% {
+            transform: scale(90);
+            opacity: 1;
         }
     }
 </style>
@@ -296,8 +318,8 @@
                     </g>
                 </g>
             </svg>
-            <div class="dot_ball"></div>
             <h4 class="h4_init">Consultany</h4>
+            <div class="dot_ball"></div>
         </div>
         <div class="business_card_cont" id="business_card_cont">
             <div class="co_photo">
@@ -373,12 +395,12 @@
     var loader = document.getElementById('init_b');
     var main = document.getElementById('business_card_cont');
     setTimeout(() => {
-        loader.style.opacity = 0;
-        loader.style.display = 'none';
-
-        main.style.display = 'block';
-        setTimeout(() => main.style.opacity = 1, 100);
-    }, 7000);
+        document.getElementById("init_b").style.animationName = "fadeOut";
+        setTimeout(() => main.style.display = 'block',100);
+        document.getElementById("business_card_cont").style.animationName = "fadeIn";
+        loader.style.display = 'none'
+        setTimeout(() => main.style.opacity = 1,200);
+    }, 6800);
 </script>
 
 </html>

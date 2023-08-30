@@ -30,8 +30,14 @@ router.get("/business", (req, res) => {
 router.get("/email_temp", (req, res) => {
   res.render("pages/email_template", { layout: false });
 });
-router.get("/business_card", (req, res) => {
-  res.render("pages/business_card", { layout: false });
+router.get("/business_card_n", (req, res) => {
+  res.render("pages/business_card_n", { layout: false });
+});
+router.get("/business_card_r", (req, res) => {
+  res.render("pages/business_card_r", { layout: false });
+});
+router.get("/business_card_e", (req, res) => {
+  res.render("pages/business_card_e", { layout: false });
 });
 
 router.get("/contact_form", (req, res) => {

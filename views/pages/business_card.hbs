@@ -150,7 +150,7 @@
 
     .init_b {
         width: 100%;
-        height: 100vh;
+        height: 100%;
         background: #F9F8F4;
         display: flex;
         align-items: center;
@@ -189,9 +189,16 @@
         animation: drop_in 8s ease-in;
     }
 
-    .h4_init{
-        color: black;font-size:16px;font-weight:400;
+    .h4_init {
+        color: black;
+        font-size: 16px;
+        font-weight: 400;
         animation: fadeIn 2s ease-in;
+    }
+
+    .business_cont{
+        height: 100vh;
+        width: 100%;
     }
 
     @keyframes drop_in {
@@ -217,12 +224,23 @@
     }
 
     @keyframes fadeIn {
-        0%{opacity: 0;}
-        100%{opacity: 1;}
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
     }
+
     @keyframes fadeOut {
-        0%{opacity: 1;}
-         100%{opacity: 0;}
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
     }
 
     @keyframes dot_animation {
@@ -254,94 +272,99 @@
 </style>
 
 <body>
-    <div class="init_b" id="init_b">
-        <svg width="135" height="70" viewBox="0 0 1200 344" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g id="OFFICIAL ICON">
-                <path id="A"
-                    d="M242.06 287.48L120.25 288L101.46 342.93L0 343.34L133.54 5.08996L226.08 4.70996L365.49 341.82L261.24 342.25L242.06 287.48ZM180.2 110.3L143 215.1L218.65 214.78L180.2 110.3Z"
-                    fill="#00053B" />
-                <path id="I" d="M729.48 2.61021L825.41 2.22021L826.86 339.9L730.93 340.3L729.48 2.61021Z"
-                    fill="#00053B" />
-                <path id="N"
-                    d="M1198.54 0.660156L1200 338.34L1121.7 338.67L984.38 156L985.17 339.26L893.43 339.64L892 1.94016L974.87 1.59015L1107.59 178.21L1106.8 1.00015L1198.54 0.660156Z"
-                    fill="#00053B" />
-                <path id="k" d="M396.1 5H491.93V341.67H396.1V5Z" fill="#00053B" />
-                <g id="K-1">
-                    <path id="Vector"
-                        d="M718.69 5.57031H629.69C629.69 5.57031 612.45 7.02032 604.69 18.6903C596.93 30.3603 479.19 173 479.19 173L530.86 236.54L718.69 5.57031Z"
-                        fill="#FF7000" />
-                    <path id="Vector_2"
-                        d="M576.54 54.21C576.54 54.21 534.06 111.48 582.54 173.03C631.02 234.58 718.72 340.43 718.72 340.43H631.22C631.22 340.43 616 341.27 606 328.91L479.19 173L576.54 54.21Z"
-                        fill="#FF7000" />
+    <div class="business_cont">
+
+        <div class="init_b" id="init_b">
+            <svg width="135" height="70" viewBox="0 0 1200 344" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="OFFICIAL ICON">
+                    <path id="A"
+                        d="M242.06 287.48L120.25 288L101.46 342.93L0 343.34L133.54 5.08996L226.08 4.70996L365.49 341.82L261.24 342.25L242.06 287.48ZM180.2 110.3L143 215.1L218.65 214.78L180.2 110.3Z"
+                        fill="#00053B" />
+                    <path id="I" d="M729.48 2.61021L825.41 2.22021L826.86 339.9L730.93 340.3L729.48 2.61021Z"
+                        fill="#00053B" />
+                    <path id="N"
+                        d="M1198.54 0.660156L1200 338.34L1121.7 338.67L984.38 156L985.17 339.26L893.43 339.64L892 1.94016L974.87 1.59015L1107.59 178.21L1106.8 1.00015L1198.54 0.660156Z"
+                        fill="#00053B" />
+                    <path id="k" d="M396.1 5H491.93V341.67H396.1V5Z" fill="#00053B" />
+                    <g id="K-1">
+                        <path id="Vector"
+                            d="M718.69 5.57031H629.69C629.69 5.57031 612.45 7.02032 604.69 18.6903C596.93 30.3603 479.19 173 479.19 173L530.86 236.54L718.69 5.57031Z"
+                            fill="#FF7000" />
+                        <path id="Vector_2"
+                            d="M576.54 54.21C576.54 54.21 534.06 111.48 582.54 173.03C631.02 234.58 718.72 340.43 718.72 340.43H631.22C631.22 340.43 616 341.27 606 328.91L479.19 173L576.54 54.21Z"
+                            fill="#FF7000" />
+                    </g>
                 </g>
-            </g>
-        </svg>
-        <div class="dot_ball"></div>
-        <h4 class="h4_init" >Consultany</h4>
-    </div>
-    <div class="business_card_cont" id="business_card_cont">
-        <div class="co_photo">
-            <img
-                src="https://github.com/Thethinker20/akin_main_website/assets/43387401/4ce5628f-4bf5-43a7-ba12-27b1618d0cd5">
+            </svg>
+            <div class="dot_ball"></div>
+            <h4 class="h4_init">Consultany</h4>
         </div>
-        <div class="co_wave">
-            <img src="https://github.com/Thethinker20/akin_main_website/assets/43387401/f20150be-94ba-48f7-9078-7e0b363f9f8e"
-                alt="">
-        </div>
-        <div class="akin_logo_cont">
-            <img src="https://github.com/Thethinker20/akin_main_website/assets/43387401/820a5364-2841-417e-af25-659e2d880942"
-                alt="">
-        </div>
-        <div class="info_content">
-            <div class="line_cont">
-                <img src="https://github.com/Thethinker20/akin_main_website/assets/43387401/29037db9-1cbc-4f4a-833c-e51fc57d754d"
+        <div class="business_card_cont" id="business_card_cont">
+            <div class="co_photo">
+                <img
+                    src="https://github.com/Thethinker20/akin_main_website/assets/43387401/4ce5628f-4bf5-43a7-ba12-27b1618d0cd5">
+            </div>
+            <div class="co_wave">
+                <img src="https://github.com/Thethinker20/akin_main_website/assets/43387401/f20150be-94ba-48f7-9078-7e0b363f9f8e"
                     alt="">
             </div>
-            <div class="all_info">
-                <h1>Nathaniel Martina</h1>
-                <p class="all_name_">Software Engineer</p>
-                <p class="all_name_p">Co-Founder</p>
-                <div class="akin_text">
-                    <p>Here at AKIN we have different types of services that suit your needs. <span class="s_color">RPA
-                            Development</span>,
-                        <span class="s_color">Business Management</span> and <span class="s_color">Software Design and
-                            Develop</span>
-                    </p>
+            <div class="akin_logo_cont">
+                <img src="https://github.com/Thethinker20/akin_main_website/assets/43387401/820a5364-2841-417e-af25-659e2d880942"
+                    alt="">
+            </div>
+            <div class="info_content">
+                <div class="line_cont">
+                    <img src="https://github.com/Thethinker20/akin_main_website/assets/43387401/29037db9-1cbc-4f4a-833c-e51fc57d754d"
+                        alt="">
                 </div>
-                <div class="app_info">
-                    <div class="person_icon">
-                        <img
-                            src="https://github.com/Thethinker20/akin_main_website/assets/43387401/0df1ff5a-1adc-4066-9f30-bb70537f594d">
-                        <div class="person_icon_t">
-                            <p>+599 9 516 6700</p>
+                <div class="all_info">
+                    <h1>Nathaniel Martina</h1>
+                    <p class="all_name_">Software Engineer</p>
+                    <p class="all_name_p">Co-Founder</p>
+                    <div class="akin_text">
+                        <p>Here at AKIN we have different types of services that suit your needs. <span
+                                class="s_color">RPA
+                                Development</span>,
+                            <span class="s_color">Business Management</span> and <span class="s_color">Software Design
+                                and
+                                Develop</span>
+                        </p>
+                    </div>
+                    <div class="app_info">
+                        <div class="person_icon">
+                            <img
+                                src="https://github.com/Thethinker20/akin_main_website/assets/43387401/0df1ff5a-1adc-4066-9f30-bb70537f594d">
+                            <div class="person_icon_t">
+                                <p>+599 9 516 6700</p>
+                            </div>
+                        </div>
+                        <div class="person_icon">
+                            <img
+                                src="https://github.com/Thethinker20/akin_main_website/assets/43387401/986bb5fe-60fd-4771-a383-653d7d6b8f0a">
+                            <div class="person_icon_t">
+                                <a href="">nathaniel.martina.official@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="person_icon">
+                            <img
+                                src="https://github.com/Thethinker20/akin_main_website/assets/43387401/4f99288b-586a-4b84-aba0-6ea0741e8fbe">
+                            <div class="person_icon_t">
+                                <a href="https://akin-co-website.onrender.com/home">www.akinbv_curacao.com</a>
+                            </div>
+                        </div>
+                        <div class="person_icon">
+                            <img class="per_linkedin"
+                                src="https://github.com/Thethinker20/akin_main_website/assets/43387401/8da21603-b90b-4c9e-b155-d834949defc9">
+                            <div class="person_icon_t">
+                                <a href="https://www.linkedin.com/in/nathaniel-martina-5b48671a0/">Nathaniel Martina</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="person_icon">
-                        <img
-                            src="https://github.com/Thethinker20/akin_main_website/assets/43387401/986bb5fe-60fd-4771-a383-653d7d6b8f0a">
-                        <div class="person_icon_t">
-                            <a href="">nathaniel.martina.official@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="person_icon">
-                        <img
-                            src="https://github.com/Thethinker20/akin_main_website/assets/43387401/4f99288b-586a-4b84-aba0-6ea0741e8fbe">
-                        <div class="person_icon_t">
-                            <a href="https://akin-co-website.onrender.com/home">www.akinbv_curacao.com</a>
-                        </div>
-                    </div>
-                    <div class="person_icon">
-                        <img class="per_linkedin"
-                            src="https://github.com/Thethinker20/akin_main_website/assets/43387401/8da21603-b90b-4c9e-b155-d834949defc9">
-                        <div class="person_icon_t">
-                            <a href="https://www.linkedin.com/in/nathaniel-martina-5b48671a0/">Nathaniel Martina</a>
-                        </div>
-                    </div>
+                    <h1 style="padding-top: 60px;"><span class="s_color">Build</span>, automate and manage your <span
+                            class="s_color">future</span></h1>
+                    <img style="height: 90px;padding-top:90px;"
+                        src="https://github.com/Thethinker20/akin_main_website/assets/43387401/bbd0a4dd-7b87-4429-a28e-f638b818191a">
                 </div>
-                <h1 style="padding-top: 60px;"><span class="s_color">Build</span>, automate and manage your <span
-                        class="s_color">future</span></h1>
-                <img style="height: 90px;padding-top:90px;"
-                    src="https://github.com/Thethinker20/akin_main_website/assets/43387401/bbd0a4dd-7b87-4429-a28e-f638b818191a">
             </div>
         </div>
     </div>
@@ -349,12 +372,12 @@
 <script>
     var loader = document.getElementById('init_b');
     var main = document.getElementById('business_card_cont');
-setTimeout(() => {
-      loader.style.opacity = 0;
-      loader.style.display = 'none';
+    setTimeout(() => {
+        loader.style.opacity = 0;
+        loader.style.display = 'none';
 
-      main.style.display = 'block';
-      setTimeout(() => main.style.opacity = 1, 100);
+        main.style.display = 'block';
+        setTimeout(() => main.style.opacity = 1, 100);
     }, 7000);
 </script>
 

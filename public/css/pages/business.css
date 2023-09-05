@@ -420,7 +420,7 @@
     color: #010A3B;
 }
 
-.i_circle{
+.i_circle {
     position: relative;
     width: 9px;
     height: 9px;
@@ -430,7 +430,7 @@
     left: 313px;
 }
 
-.team_button{
+.team_button {
     position: relative;
     width: 200px;
     height: 60px;
@@ -444,17 +444,120 @@
     left: 40px;
     top: -10px;
 }
-.pt_{
+
+.pt_ {
     padding-top: 70px;
 }
-.pt_team{
+
+.pt_team {
     padding-top: 115px;
 }
 
 
-.team_button:hover{
+.team_button:hover {
     text-decoration: none;
     color: #F06E30;
     background: #fff;
     border: #f06d3044 solid 1px;
+}
+
+@media (max-width: 768px) {
+    .business_header {
+        background: url(/media/mobile_b_img.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .business_text {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text_bus h4 {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .text_bus_2 h4 {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .welcome_b {
+        height: 116vh;
+    }
+
+    .w_cont_t {
+        display: block;
+    }
+
+    .w_contt_l {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .w_contt_l h5 {
+        font-size: 15px;
+        line-height: 28px;
+    }
+
+    .w_contt_l h5 span {
+        font-size: 37px;
+    }
+
+    .high_i_b {
+        margin-top: -248px;
+        height: 115vh;
+    }
+
+    .high_content {
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .high_content h1 {
+        font-size: 27px;
+        line-height: 37px;
+        width: 80%;
+    }
+    .high_content p {
+        font-size: 15px;
+        line-height: 23px;
+        width: 90%;
+    }
+    .analisis_b {
+        height: 160vh;
+    }
+    .analisis_content {
+        width: 100%;
+    }
+    .analisis_content h2 {
+        font-size: 35px;
+        width: 100%;
+    }
+    .analisis_content p {
+        font-size: 16px;
+        width: 95%;
+    }
+    .an_img {
+        height: 290px;
+    }
+    .last_part {
+        flex-direction: column;
+        text-align: center;
+    }
+    .last_part h3 {
+        font-size: 30px;
+        line-height: 56px;
+    }
+    .team_button {
+        left: 0px;
+        top: 0px;
+        width: 170px;
+    height: 50px;
+    font-size: 15px;
+    }
 }

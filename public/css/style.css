@@ -7,7 +7,19 @@ body {
     color: #686868;
     overflow-x: hidden;
 }
-
+body {
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 .header_home {
     width: 100%;
     height: 100vh;

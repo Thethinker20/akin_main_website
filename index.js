@@ -51,7 +51,7 @@ app.use(express.urlencoded({ extended: false })); //urlencoded
 app.use(bodyParser.json());
 
 
-app.post("/send_cont_mail", async (req, res) => {
+app.post("/send_cont_mail", async (req, rest) => {
     const { firstname,
         lastname,
         email,
@@ -961,7 +961,7 @@ app.post("/send_cont_mail", async (req, res) => {
 
     transporter.sendMail(mailOption, function (err, res) {
         if (err) {
-            res.send({ error: "Send mail error contact administrator!" });
+            rest.json({ error: "Send mail error contact administrator!" });
         }
     });
 
@@ -974,11 +974,11 @@ app.post("/send_cont_mail", async (req, res) => {
         },
     });
 
-    // "business.cath.official@gmail.com", "Elfrayline.laker@gmail.com",
+    // "business.cath.official@gmail.com", "Elfrayline.laker@gmail.com","info.akin.co@gmail.com"
 
     let mailOption_b = {
         from: `${email}`,
-        to: ["business.cath.official@gmail.com", "Elfrayline.laker@gmail.com","nathacarcool@gmail.com", "info.akin.co@gmail.com"],
+        to: ["nathaniel.martina.official@gmail.com","business.cath.official@gmail.com", "Elfrayline.laker@gmail.com","info.akin.co@gmail.com" ],
         subject: "AKIN Client Request",
         html: `<!DOCTYPE html>
         <html>
@@ -1258,7 +1258,6 @@ app.post("/send_cont_mail", async (req, res) => {
                                                                 Level of experience: ${l_expert}<br>
                                                                 Company Goal: ${n_goals}<br>
                                                                 Project timeline: ${timeline}<br>
-                                                                Project budget: ${budget}<br>
                                                                 Factors: ${factors}<br><br>
                                                                 Message: ${message}<br>
                                                             </td>
@@ -1458,13 +1457,13 @@ app.post("/send_cont_mail", async (req, res) => {
         </html>`
     };
 
-    transporter_b.sendMail(mailOption_b, function (err, res) {
-        if (err) {
-            res.send({ error: "Send mail error contact administrator!" });
+    transporter_b.sendMail(mailOption_b, function (error, res) {
+        if (error) {
+            rest.json({status:"404", error: "Send mail error contact administrator!" });
+        }else{
+            rest.json({ msg: "Succesfull!", status:"202"});
         }
     });
-    
-    res.redirect("/contact_form?success=true&message=Request send succesfull");
 });
 // Routes
 app.use(require("./routes"));

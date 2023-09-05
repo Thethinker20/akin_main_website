@@ -660,6 +660,8 @@
     width: 100%;
     position: relative;
     margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
 }
 .pt_team{
     padding-top: 35px;

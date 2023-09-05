@@ -113,6 +113,9 @@
     .form-p{
         font-size: 15px;
     }
+    .formbold-main-content {
+        height: 90vh;
+    }
 }
 
 @keyframes fadeInAnimation {

@@ -943,9 +943,6 @@
   line-height: 33px;
   padding-top: 0px;
 }
-.cont_overlay p span {
-  color: #030B38;
-}
 }
 
 @-webkit-keyframes moveLeftBounces-last {

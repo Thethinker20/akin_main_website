@@ -560,4 +560,17 @@
     height: 50px;
     font-size: 15px;
     }
+    .i_circle{
+        top: 19px;
+    left: 41px;
+    }
+    .high_i_b img{
+        height: 40%;
+    }
+    .row_a{
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-right:0px;
+        padding-left: 0px;
+    }
 }

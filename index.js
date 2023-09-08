@@ -61,7 +61,7 @@ app.post("/send_cont_mail", async (req, rest) => {
         n_goals,
         l_expert,
         timeline,
-        budget,
+        meet_p,
         factors,
         message } = req.body;
 
@@ -978,7 +978,7 @@ app.post("/send_cont_mail", async (req, rest) => {
 
     let mailOption_b = {
         from: `${email}`,
-        to: ["nathaniel.martina.official@gmail.com","business.cath.official@gmail.com", "Elfrayline.laker@gmail.com","info.akin.co@gmail.com" ],
+        to: ["nathaniel.martina.official@gmail.com","business.cath.official@gmail.com","Elfrayline.laker@gmail.com","info.akin.co@gmail.com"],
         subject: "AKIN Client Request",
         html: `<!DOCTYPE html>
         <html>
@@ -1258,7 +1258,8 @@ app.post("/send_cont_mail", async (req, rest) => {
                                                                 Level of experience: ${l_expert}<br>
                                                                 Company Goal: ${n_goals}<br>
                                                                 Project timeline: ${timeline}<br>
-                                                                Factors: ${factors}<br><br>
+                                                                Meeting preference: ${factors}<br>
+                                                                Factors: ${meet_p}<br><br>
                                                                 Message: ${message}<br>
                                                             </td>
                                                         </tr>

@@ -12,6 +12,7 @@ var services;
 var n_goals;
 var l_expert;
 var timeline;
+var meet_p;
 
 $("#nextb_1").on("click", function () {
   firstname = document.getElementById("firstname").value;
@@ -56,6 +57,7 @@ $("#nextb_2").on("click", function () {
   n_goals = document.getElementById("n_goals").value;
   l_expert= document.getElementById("l_expert").value;
   timeline = document.getElementById("timeline").value;
+  meet_p = document.getElementById("meet_p").value;
   if (
     comp_name == "" ||
     comp_name == null ||
@@ -66,7 +68,9 @@ $("#nextb_2").on("click", function () {
     l_expert == "" ||
     l_expert == null ||
     timeline == "" ||
-    timeline == null
+    timeline == null||
+    meet_p == "" ||
+    meet_p == null
   ) {
     if (comp_name == "") {
       $("#comp_name").addClass("is_invalid");
@@ -81,6 +85,9 @@ $("#nextb_2").on("click", function () {
       $("#l_expert").addClass("is_invalid");
     }
     if (timeline == "") {
+      $("#timeline").addClass("is_invalid");
+    }
+    if (meet_p == "") {
       $("#timeline").addClass("is_invalid");
     }
   } else {
@@ -122,6 +129,7 @@ async function send_mail(event) {
         l_expert,
         timeline,
         factors,
+        meet_p,
         message,
       }),
     }).then((res) => res.json());
@@ -139,7 +147,6 @@ async function send_mail(event) {
             confirmButtonColor: '#F06E30'
         }).then((result) => {
             window.location.href = "https://mail.google.com/mail/";
-
         })
     } else {
       Swal.fire({

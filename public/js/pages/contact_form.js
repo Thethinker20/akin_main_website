@@ -13,6 +13,7 @@ var n_goals;
 var l_expert;
 var timeline;
 var meet_p;
+var client_id;
 
 $("#nextb_1").on("click", function () {
   firstname = document.getElementById("firstname").value;
@@ -100,6 +101,13 @@ $("#backb_3").on("click", function () {
   p3.style.display = "none";
 });
 
+function generate_clientId(){
+  var year = new Date().getFullYear();
+  var month = new Date().getMonth();
+  var random_number = Math.floor((Math.random() * 100) + 4);
+  client_id = year + "A0"+month+random_number+"RBS";
+}
+
 //send form
 const form = document.getElementById("cont_form");
 form.addEventListener("submit", send_mail);
@@ -108,6 +116,8 @@ async function send_mail(event) {
   event.preventDefault();
   const factors = document.getElementById("factors").value;
   var message = document.getElementById("message").value;
+  generate_clientId();
+  var created_date = new Date();
   if (factors == "" || factors == null) {
     if (factors == "") {
       $("#factors").addClass("is_invalid");
@@ -131,6 +141,8 @@ async function send_mail(event) {
         factors,
         meet_p,
         message,
+        client_id,
+        created_date
       }),
     }).then((res) => res.json());
     if (result.status === "202") {
@@ -146,7 +158,7 @@ async function send_mail(event) {
             },
             confirmButtonColor: '#F06E30'
         }).then((result) => {
-            window.location.href = "https://mail.google.com/mail/";
+            window.open('hhttps://mail.google.com/mail/', '_blank');
         })
     } else {
       Swal.fire({

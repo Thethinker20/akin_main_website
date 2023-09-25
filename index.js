@@ -8,11 +8,9 @@ const path = require("path");
 const bodyParser = require("body-parser");
 var nodemailer = require('nodemailer');
 var hbs_mail = require('nodemailer-express-handlebars');
-const axios = require('axios');
-
-require('dotenv').config();
 
 const app = express();
+const getMongoClient = require("./database");
 app.set("views", path.join(__dirname, "views"));
 
 const hbs = exphbs.create({
@@ -52,7 +50,8 @@ app.use(bodyParser.json());
 
 
 app.post("/send_cont_mail", async (req, rest) => {
-    const { firstname,
+    const { client_id,
+        firstname,
         lastname,
         email,
         comp_name,
@@ -63,7 +62,8 @@ app.post("/send_cont_mail", async (req, rest) => {
         timeline,
         meet_p,
         factors,
-        message } = req.body;
+        message,
+        created_date } = req.body;
 
     let transporter = nodemailer.createTransport({
         service: "gmail",
@@ -88,7 +88,7 @@ app.post("/send_cont_mail", async (req, rest) => {
         <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
         <script src='main.js'></script>
     </head>
-    
+
     <body>
         <div data-template-type="html" style="height: auto; padding-bottom: 149px;" class="ui-sortable">
             <!--[if !mso]><!-->
@@ -401,10 +401,10 @@ app.post("/send_cont_mail", async (req, rest) => {
                                                             representatives will be assigned to your request and will be in
                                                             touch with you soon to discuss the details and provide you with
                                                             the necessary information or assistance.<br><br>
-    
+
                                                             If you have any further questions or concerns, please do not
                                                             hesitate to reach out to us. We are always here to help.<br><br>
-    
+
                                                             Thank you for choosing AKIN BV. We look forward to
                                                             serving you.
                                                         </td>
@@ -414,7 +414,7 @@ app.post("/send_cont_mail", async (req, rest) => {
                                                         <td height="23" style="font-size:0px">&nbsp;</td>
                                                     </tr>
                                                     <!-- link -->
-                                                    
+
                                                     <!-- link end -->
                                                     <tr>
                                                         <td height="35" style="font-size:0px">&nbsp;</td>
@@ -955,7 +955,7 @@ app.post("/send_cont_mail", async (req, rest) => {
             </table>
         </div>
     </body>
-    
+
     </html>`
     };
 
@@ -978,11 +978,11 @@ app.post("/send_cont_mail", async (req, rest) => {
 
     let mailOption_b = {
         from: `${email}`,
-        to: ["nathaniel.martina.official@gmail.com","business.cath.official@gmail.com","Elfrayline.laker@gmail.com","info.akin.co@gmail.com"],
+        to: ["nathaniel.martina.official@gmail.com","business.cath.official@gmail.com", "Elfrayline.laker@gmail.com","info.akin.co@gmail.com"],
         subject: "AKIN Client Request",
         html: `<!DOCTYPE html>
         <html>
-        
+
         <head>
             <meta charset='utf-8'>
             <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -991,7 +991,7 @@ app.post("/send_cont_mail", async (req, rest) => {
             <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
             <script src='main.js'></script>
         </head>
-        
+
         <body>
             <div data-template-type="html" style="height: auto; padding-bottom: 149px;" class="ui-sortable">
                 <!--[if !mso]><!-->
@@ -1239,7 +1239,7 @@ app.post("/send_cont_mail", async (req, rest) => {
                                                                 data-max="26" data-min="6">
                                                                 ${firstname} have send us a request from the business ${comp_name} to
                                                                 get more information of our ${services}.<br><br>
-        
+
                                                                 Let's review this request as fast as we can, to give the best
                                                                 service to this company.<br><br>
                                                             </td>
@@ -1288,7 +1288,7 @@ app.post("/send_cont_mail", async (req, rest) => {
                                                             <td height="23" style="font-size:0px">&nbsp;</td>
                                                         </tr>
                                                         <!-- link -->
-        
+
                                                         <!-- link end -->
                                                         <tr>
                                                             <td height="35" style="font-size:0px">&nbsp;</td>
@@ -1454,18 +1454,41 @@ app.post("/send_cont_mail", async (req, rest) => {
                 </table>
             </div>
         </body>
-        
+
         </html>`
     };
 
     transporter_b.sendMail(mailOption_b, function (error, res) {
         if (error) {
-            rest.json({status:"404", error: "Send mail error contact administrator!" });
-        }else{
-            rest.json({ msg: "Succesfull!", status:"202"});
+            rest.json({ status: "404", error: "Send mail error contact administrator!" });
+        } else {
+            rest.json({ msg: "Succesfull!", status: "202" });
         }
     });
+    const data = {
+        client_id: client_id,
+        firstname: firstname,
+        lastname: lastname,
+        email: email,
+        comp_name: comp_name,
+        tnumber: tnumber,
+        services: services,
+        n_goals: n_goals,
+        l_expert: l_expert,
+        timeline: timeline,
+        meet_p: meet_p,
+        factors: factors,
+        message: message,
+        createdAt: created_date
+    }
+    getMongoClient().then(client =>
+        client.db("AkinUsers").collection("users").insertOne(data, function (err, res) {
+            if (err) throw err;
+            console.log("1 document inserted");
+        })
+    );
 });
+
 // Routes
 app.use(require("./routes"));
 app.use(express.static(path.join(__dirname, "public")));
